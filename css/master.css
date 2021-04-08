@@ -1,75 +1,73 @@
+@import url('https://fonts.googleapis.com/css?family=Black+Ops+One|Caveat+Brush&display=swap');
+@import "backgraund.css";
+@import "menu.css";
+@import "galeria.css";
+@import "bio.css";
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-/* The sidepanel menu */
-.sidepanel {
-  height: 250px; /* Specify a height */
-  width: 0; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
-  top: 0;
-  left: 0;
-  background-color: #111; /* Black*/
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
-}
 
-/* The sidepanel links */
-.sidepanel a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-
-/* When you mouse over the navigation links, change their color */
-.sidepanel a:hover {
-  color: #f1f1f1;
-}
-
-/* Position and style the close button (top right corner) */
-.sidepanel .closebtn {
+#contacto {
   position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
+  top: 50%;
+  left: 20%;
+  font-family: sans-serif;
+  font-size: 22px;
+  color: rgba(4, 217, 255, 1);
+
+}
+#contacto a {
+  margin: 35px;
+  text-decoration: none;
+  color: rgba(4, 217, 255, 1);
 }
 
-/* Style the button that is used to open the sidepanel */
-.openbtn {
-  font-size: 20px;
-  cursor: pointer;
-  background-color: #111;
-  color: white;
-  padding: 10px 15px;
-  border: none;
+.contenedor {
+  width: 98%;
+  margin: auto;
 }
 
-.openbtn:hover {
-  background-color: #444;
+header .contenedor {
+  display: table;
 }
 
-
-.videos {
-  margin-top: 75px;
+.youtube-video-container {
   position: relative;
-  padding-bottom: 56.25%; /* 16/9 ratio */
-  padding-top: 30px; /* IE6 workaround*/
-  height: 0;
   overflow: hidden;
+  width: 100%;
 }
-.videos iframe,
-.videos object,
-.videos embed {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
+
+.youtube-video-container::after {
+  display: block;
+  content: "";
+  padding-top: 56.25%;
+}
+
+.youtube-video-container iframe {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+footer {
+  position:fixed;
+  left:0px;
+  bottom:0px;
+  height:30px;
+  width:100%;
+  background: transparent;
+}
+footer p {
+  text-align: center;
+  color: rgb(255, 255, 255)
+
+}
+@media (min-width:768px) {
+  footer .contenedor {
+    justify-content: space-between;
+  }
 }
